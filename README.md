@@ -7,6 +7,10 @@ With this tool you can easy add some logs in magento 2 in any place in code just
 
 Your log will in file /var/log/$fileName
 
+### Installation
+
+composer require alekseon/logger
+
 ### Available methods
 
 \Alekseon\Logger\Logger::info($message, $fileName = null)
