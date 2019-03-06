@@ -36,6 +36,7 @@ class Handler extends \Magento\Framework\Logger\Handler\Base
     public function setFileName($fileName)
     {
         $this->fileName = BP . DIRECTORY_SEPARATOR . '/var/log/' . $fileName;
-        \Monolog\Handler\StreamHandler::__construct($this->fileName, $this->loggerType);
+        $this->stream = $this->fileName;
+        $this->url = $this->fileName;
     }
 }
