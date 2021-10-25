@@ -19,7 +19,7 @@ class Logger
     static function log($message, $level = \Monolog\Logger::INFO, $fileName = null)
     {
         $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-        $logger = $objectManager->create('Psr\Log\LoggerInterface');
+        $logger = $objectManager->create('Magento\Framework\Logger\Monolog');
         $handler = $objectManager->create('Alekseon\Logger\HandlerFactory')->create($fileName);
         $logger->setHandlers([$handler]);
         $logger->log($level, $message);
