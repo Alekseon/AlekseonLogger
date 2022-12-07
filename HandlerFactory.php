@@ -27,9 +27,7 @@ class HandlerFactory
      */
     public function create($fileName = null)
     {
-        if ($fileName) {
-            $this->loggerHandler->setFileName($fileName);
-        }
+        $this->loggerHandler->setFileName($fileName);
         return $this->loggerHandler;
     }
 }

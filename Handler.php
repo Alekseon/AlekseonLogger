@@ -13,7 +13,11 @@ use Magento\Framework\Filesystem\DriverInterface;
  */
 class Handler extends \Magento\Framework\Logger\Handler\Base
 {
-    protected $fileName = '/var/log/alekseon.log';
+    const DEFAULT_FILENAME = 'alekseon.log';
+    /**
+     * @var string 
+     */
+    protected $fileName = self::DEFAULT_FILENAME;
 
     /**
      * Handler constructor.
@@ -30,11 +34,14 @@ class Handler extends \Magento\Framework\Logger\Handler\Base
     }
 
     /**
-     * @param $fileName
-     * @throws \Exception
+     * @param null $fileName
      */
-    public function setFileName($fileName)
+    public function setFileName($fileName = null)
     {
+        if (!$fileName) {
+            $fileName = self::DEFAULT_FILENAME;
+        }
+        
         $this->fileName = BP . DIRECTORY_SEPARATOR . '/var/log/' . $fileName;
         $this->stream = $this->fileName;
         $this->url = $this->fileName;
