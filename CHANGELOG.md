@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 ### Fixed
 
+## [100.1.5] - 2022-12-07
+### Changed
+- removed php requirements
+
 ## [100.1.4] - 2021-10-25
 ### Added
 - update for magento 2.4.3
