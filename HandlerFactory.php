@@ -12,6 +12,11 @@ namespace Alekseon\Logger;
 class HandlerFactory
 {
     /**
+     * @var Handler
+     */
+    protected $loggerHandler;
+
+    /**
      * HandlerFactory constructor.
      * @param Handler $loggerHandler
      */

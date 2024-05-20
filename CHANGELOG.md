@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 ### Fixed
 
+## [100.1.7] - 2024-05-20
+### Fixed
+- php 8 compatibility
+
 ## [100.1.6] - 2022-12-07
 ### Changed
 - fix issue for logs in incorrect files
